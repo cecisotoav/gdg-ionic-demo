@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM /Cecilia Soto</title>
+</head>
+
+<body>
+
+    <p><a href="http://cdctecmilenio.mx">Lernit</a></p>
+    <script>
+        let enlace = document.body.getElementsByTagName("a")[0];
+        console.log(enlace.href);
+    </script
+
+    <p> Mi perro Rufo: </p>
+    <p> <img id = "rufo" src = "img/rufo.png"> </p>
+    <script>
+        let perro = document.getElementById("rufo");
+        console.log(perro.src);
+    </script>
+
+    <p>Uno</p>
+    <p>Dos</p>
+    <p>Tres</p>
+
+    <script>
+        let parrafos = document.body.getElementsByTagName("p");
+        for (let parrafo of Array.from(parrafos)){
+        if (parrafo.getAttribute("data-classified") == "secreto)"){
+            parrafo.remove();
+        }
+            //document.body.insertBefore(parrafos[2], parrafos(0));
+        }
+    </script>
+
+    <script>
+        function remplaceImagenes() {
+            let remplaceImagenes = document.body.getElementsByTagName("img");
+            for (let i = imagenes.length - 1; i >= 0; i--) {
+                let imagen = imagenes[i];
+                if (imagen.alt) {
+                    let texto = document.createTextNode(imagen.alt);
+                    imagen.parentNode.remplaceChild(texto, imagen);
+                }
+            }
+        }
+    </script>
+
+    <p id="parrafo" style="color: purple">
+    Texto lindo
+    </p>
+    <script>
+        let parrafo = document.getElementById("parrafo");
+        console.log(parrafo.style.color);
+        parrafo.style.color ="magenta";
+    </script>
+
+</body>
+
+</html>

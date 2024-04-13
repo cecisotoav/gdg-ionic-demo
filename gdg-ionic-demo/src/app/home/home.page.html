@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Personajes
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-input label="Pagina" type="number" [value]="pagina"></ion-input>
+    (ionInput)
+    </ion-input>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  @for (personaje of personajes; track 'id') {
+    @if(personaje.species == 'Alien');
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="personaje.image">
+      </ion-avatar>
+      <ion-label>
+        <h2>
+          {{ personaje.name }}
+        </h2>
+      </ion-label>
+      <ion-chip slot="end">
+        {{ personaje.species }}
+      </ion-chip>
+    </ion-item>
+  }
+</ion-content>
